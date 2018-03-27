@@ -5,6 +5,8 @@
  */
 package tiposform;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author pc
@@ -116,6 +118,9 @@ public class Form2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
+     this.setVisible(false);
+        Form f=new Form();
+        f.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -152,7 +157,7 @@ public class Form2 extends javax.swing.JFrame {
             }
         });
     }
-
+private JFrame Form2=new JFrame();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
