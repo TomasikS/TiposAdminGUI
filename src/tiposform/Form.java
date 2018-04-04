@@ -5,7 +5,10 @@
  */
 package tiposform;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -99,15 +102,21 @@ public class Form extends javax.swing.JFrame {
       Random r=new Random();
       int []pole=new int [5];
         
-     for (int i = 0; i < pole.length-1; i++) {
-        pole[i] = (int)(Math.random()*34)+1;
-
-        for (int j = 0; j < i; j++) {
-            if (pole[i] ==pole[j]) {
-                pole[j] = (int)(Math.random()*34)+1;
-            }
-        }   
-    }
+      List zoznam =new ArrayList<Integer>();
+      
+      for (int i=1;i<35;i++)
+      zoznam.add(i);
+      
+      Collections.shuffle(zoznam);
+      
+      
+      int c1=(int)zoznam.get(0);
+            int c2=(int)zoznam.get(1);
+            int c3=(int)zoznam.get(2);
+          int c4=(int)zoznam.get(3);
+           int c5=(int)zoznam.get(4);
+     
+   pole[0]=c1;pole[1]=c2;pole[2]=c3;pole[3]=c4;pole[4]=c5;
 
        Arrays.sort(pole);  
          
